@@ -1,5 +1,4 @@
 package CustomUtil.HashMap;
-
 import org.jetbrains.annotations.NotNull;
 
 public class CustomHashMap<K, V> {
