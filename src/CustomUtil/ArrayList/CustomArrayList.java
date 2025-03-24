@@ -1,11 +1,15 @@
 package CustomUtil.ArrayList;
 
+import java.util.Arrays;
+
 public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     private Object[] data;
     private int size;
+    private static final int DEFAULT_SIZE = 10;
+    private static final int LOAD = 2;
 
     public CustomArrayList() {
-        this.data = new Object[10];
+        this.data = new Object[DEFAULT_SIZE];
         this.size = 0;
     }
 
@@ -16,7 +20,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
 
     private void assignNewDataIfFull() {
         if(size == data.length) {
-            Object[] newData = new Object[data.length * 2];
+            Object[] newData = new Object[data.length * LOAD];
             System.arraycopy(data, 0, newData, 0, data.length);
 
             data = newData;
@@ -46,11 +50,20 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
         }
     }
 
+    /*
+    * Adds element into the ArrayList
+    * With O(1) TC
+    * */
     public void add(T element) {
         assignNewDataIfFull();
         data[size++] = element;
     }
 
+    /*
+    * Adds element into the ArrayList
+    * with the specified index
+    * With O(n) TC
+    * */
     public void add(int index, T element) {
         isIndexInBound(index);
         assignNewDataIfFull();
@@ -63,19 +76,36 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
         size++;
     }
 
-
+    /*
+    * Retrieves element with the specified index
+    * With O(1) TC
+    *  */
     @SuppressWarnings("unchecked")
     public T get(int index) {
        isIndexInBound(index);
-       return (T) data[index];
+       return (T)(data[index]);
     }
 
+    /*
+    * Inserts an element into the ArrayList with the specified index
+    * If an element is already present in that index
+    * the element will get replaced with the specified element
+    * With O(1) TC
+    * */
+    public void set(int index, T element) {
+        isIndexInBound(index);
+        data[index] = element;
+    }
+
+    /*
+    * Removes the element from the specified index
+    * with O(n) TC
+    * */
     @SuppressWarnings("unchecked")
     public void remove(int index) {
         isIndexInBound(index);
 
         for(int i = index; i < size - 1; ++i) {
-
             T temp = (T)(data[i]);
             data[i] = data[i+1];
             data[i+1] = temp;
@@ -84,14 +114,28 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
         size--;
     }
 
+    /*
+    * Returns the size of the ArrayList
+    * With O(1) TC
+    * */
     public int size() {
         return size;
     }
 
+    /*
+    * Returns a boolean value
+    * True if ArrayList is empty, otherwise false
+    * With O(1) TC
+    * */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /*
+    * Returns a boolean value
+    * True if ArrayList contains the specified element, otherwise false
+    * With O(n) TC
+    * */
     public boolean contains(T element) {
         for(int i = 0; i < size; ++i) {
             if(data[i] == element) {
@@ -102,6 +146,12 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
         return false;
     }
 
+    /*
+    * Returns the index of the specified element
+    * If multiple occurrences of an element is present
+    * Index of the first occurrence of that element will be returned
+    * With O(n) TC
+    * */
     public int indexOf(T element) {
         for(int i = 0; i < size; ++i) {
             if(data[i] == element) {
@@ -112,11 +162,26 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
         return -1;
     }
 
+    /*
+    * Removes every element present in the ArrayList
+    * With O(n) TC
+    * */
     public void clear() {
-        for(int i = 0; i < size; ++i) {
-            data[i] = null;
+        Arrays.fill(data, null);
+        size = 0;
+    }
+
+    /*
+    * Pre-allocate ArrayList size with the provided capacity
+    * With O(n) TC
+    * */
+    public void ensureCapacity(int newCapacity) {
+        if(newCapacity <= data.length) {
+            return;
         }
 
-        size = 0;
+        Object[] newData = new Object[Math.max(newCapacity, data.length * LOAD)];
+        if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
+        data = newData;
     }
 }
