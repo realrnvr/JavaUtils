@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="custom-array-class implementation and tests">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayListInterface.java" afterDir="false" />
+    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="custom-array-list-interface + sout(list_name) after clear() method error fix">
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/CustomArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaUtils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaUtils.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayListInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,20 +20,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "realrnvr"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;realrnvr&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -41,9 +42,9 @@
       </UrlAndAccount>
     </option>
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProblemsViewState">
     <option name="autoscrollToSource" value="true" />
   </component>
@@ -59,6 +60,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -70,7 +75,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "settings.editor.selected.configurable": "preferences.editor",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,7 +97,8 @@
       <workItem from="1742819244821" duration="156000" />
       <workItem from="1742819417025" duration="124000" />
       <workItem from="1742819555724" duration="84000" />
-      <workItem from="1742819654856" duration="7381000" />
+      <workItem from="1742819654856" duration="11946000" />
+      <workItem from="1742835865744" duration="7187000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -118,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742825413490</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="custom-array-list-interface + sout(list_name) after clear() method error fix">
+      <option name="closed" value="true" />
+      <created>1742827649348</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742827649348</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +141,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="custom-array-class implementation and tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom-array-class implementation and tests" />
+    <MESSAGE value="custom-array-list-interface + sout(list_name) after clear() method error fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="custom-array-list-interface + sout(list_name) after clear() method error fix" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
