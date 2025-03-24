@@ -1,19 +1,23 @@
-package CustomUtil;
+package CustomUtil.ArrayList;
 
-public class CustomArrayList<T> {
+public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     private Object[] data;
     private int size;
+
     public CustomArrayList() {
-        data = new Object[10];
-        size = 0;
+        this.data = new Object[10];
+        this.size = 0;
+    }
+
+    public CustomArrayList(int capacity) {
+        this.data = new Object[capacity];
+        this.size = 0;
     }
 
     private void assignNewDataIfFull() {
         if(size == data.length) {
             Object[] newData = new Object[data.length * 2];
-            for(int i = 0; i < data.length; ++i) {
-                newData[i] = data[i];
-            }
+            System.arraycopy(data, 0, newData, 0, data.length);
 
             data = newData;
         }
@@ -21,6 +25,10 @@ public class CustomArrayList<T> {
 
     @Override
     public String toString() {
+        if(size == 0) {
+            return "[]";
+        }
+
         StringBuilder res = new StringBuilder();
         res.append("[ ");
 
