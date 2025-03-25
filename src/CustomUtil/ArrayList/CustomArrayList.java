@@ -3,24 +3,31 @@ package CustomUtil.ArrayList;
 import java.util.Arrays;
 
 public class CustomArrayList<T> implements CustomArrayListInterface<T>{
+    private static final int DEFAULT_SIZE = 10;
+    private static final int DEFAULT_LOAD_FACTOR = 2;
+
     private Object[] data;
     private int size;
-    private static final int DEFAULT_SIZE = 10;
-    private static final int LOAD = 2;
+    private final float loadFactor;
 
     public CustomArrayList() {
-        this.data = new Object[DEFAULT_SIZE];
-        this.size = 0;
+        this(DEFAULT_SIZE, DEFAULT_LOAD_FACTOR);
     }
 
     public CustomArrayList(int capacity) {
+        this(capacity, DEFAULT_LOAD_FACTOR);
+    }
+
+    public CustomArrayList(int capacity, int loadFactor) {
         this.data = new Object[capacity];
+        this.loadFactor = loadFactor;
         this.size = 0;
     }
 
     private void assignNewDataIfFull() {
         if(size == data.length) {
-            Object[] newData = new Object[data.length * LOAD];
+            int newCapacity = (int)(data.length * loadFactor);
+            Object[] newData = new Object[newCapacity];
             System.arraycopy(data, 0, newData, 0, data.length);
 
             data = newData;
@@ -102,8 +109,9 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * with O(n) TC
     * */
     @SuppressWarnings("unchecked")
-    public void remove(int index) {
+    public T remove(int index) {
         isIndexInBound(index);
+        T element = (T)(data[index]);
 
         for(int i = index; i < size - 1; ++i) {
             T temp = (T)(data[i]);
@@ -112,6 +120,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
         }
 
         size--;
+        return element;
     }
 
     /*
@@ -180,7 +189,8 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
             return;
         }
 
-        Object[] newData = new Object[Math.max(newCapacity, data.length * LOAD)];
+        int maxCapacity = Math.max(newCapacity, (int)(data.length * loadFactor));
+        Object[] newData = new Object[maxCapacity];
         if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
         data = newData;
     }
