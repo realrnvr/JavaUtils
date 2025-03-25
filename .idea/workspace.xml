@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="custom-hashmap-implementation addition">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/__test__/TestMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMapInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/__test__/TestMain.java" afterDir="false" />
+    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/CustomHashSet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/CustomHashSetInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/__test__/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JavaUtils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaUtils.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayListInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayListInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMapInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMapInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +22,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -60,30 +59,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;JUnit.TestMain.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestMain.testNullKey.executor&quot;: &quot;Debug&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.TestMain.executor": "Run",
+    "JUnit.TestMain.testContains.executor": "Run",
+    "JUnit.TestMain.testNullKey.executor": "Debug",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RunManager">
+    <configuration name="TestMain.testContains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaUtils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CustomUtil.HashSet.__test__.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CustomUtil.HashSet.__test__" />
+      <option name="MAIN_CLASS_NAME" value="CustomUtil.HashSet.__test__.TestMain" />
+      <option name="METHOD_NAME" value="testContains" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMain.testContains" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -105,7 +128,7 @@
       <workItem from="1742819654856" duration="11946000" />
       <workItem from="1742835865744" duration="8074000" />
       <workItem from="1742874893392" duration="3362000" />
-      <workItem from="1742887365740" duration="5307000" />
+      <workItem from="1742887365740" duration="10560000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -179,7 +202,39 @@
       <option name="project" value="LOCAL" />
       <updated>1742846987727</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="custom-hash-map improvements and tests">
+      <option name="closed" value="true" />
+      <created>1742893198660</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1742893198660</updated>
+    </task>
+    <task id="LOCAL-00011" summary="custom-array-list improvements and tests">
+      <option name="closed" value="true" />
+      <created>1742893222214</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1742893222214</updated>
+    </task>
+    <task id="LOCAL-00012" summary="tests">
+      <option name="closed" value="true" />
+      <created>1742893237652</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1742893237652</updated>
+    </task>
+    <task id="LOCAL-00013" summary="com">
+      <option name="closed" value="true" />
+      <created>1742893288931</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1742893288931</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,7 +248,11 @@
     <MESSAGE value="custom-array-implementation updates" />
     <MESSAGE value="custom-hashmap-implementation tests" />
     <MESSAGE value="custom-hashmap-implementation addition" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom-hashmap-implementation addition" />
+    <MESSAGE value="custom-hash-map improvements and tests" />
+    <MESSAGE value="custom-array-list improvements and tests" />
+    <MESSAGE value="tests" />
+    <MESSAGE value="com" />
+    <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
