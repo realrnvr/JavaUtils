@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     private static final int DEFAULT_SIZE = 16;
+    private static final float INCREASE_SIZE_BY = 1.5f;
 
     private Object[] data;
     private int size;
@@ -19,7 +20,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
 
     private void assignNewDataIfFull() {
         if(size == data.length) {
-            int newCapacity = (int)(data.length * 2);
+            int newCapacity = (int)(data.length * INCREASE_SIZE_BY);
             Object[] newData = new Object[newCapacity];
             System.arraycopy(data, 0, newData, 0, data.length);
 
@@ -182,7 +183,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
             return;
         }
 
-        int maxCapacity = Math.max(newCapacity, (int)(data.length * 2));
+        int maxCapacity = Math.max(newCapacity, (int)(data.length * INCREASE_SIZE_BY));
         Object[] newData = new Object[maxCapacity];
         if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
         data = newData;
