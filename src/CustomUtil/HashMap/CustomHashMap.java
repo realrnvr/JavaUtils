@@ -17,8 +17,8 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
     public CustomHashMap(int capacity, float loadFactor) {
         this.capacity = capacity;
         this.loadFactor = loadFactor;
-        this.size = 0;
         this.table = (Node<K, V>[])(new Node[capacity]);
+        this.size = 0;
     }
 
     private static class Node<K, V> {
@@ -54,7 +54,7 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
             return 0;
         }
 
-        return key.hashCode() % capacity;
+        return Math.abs(key.hashCode() % capacity);
     }
 
     private int hash(K key, int newCapacity) {
@@ -62,7 +62,7 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
             return 0;
         }
 
-        return key.hashCode() % newCapacity;
+        return Math.abs(key.hashCode() % newCapacity);
     }
 
     @SuppressWarnings("unchecked")
@@ -176,10 +176,10 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
     * With worst O(n) TC : [due to hash collision]
     * For Java 8+, worst O(log n) : [using tree buckets]
     * */
-    public void remove(K key) {
+    public V remove(K key) {
         int index = hash(key);
 
-        if(table[index] == null) return;
+        if(table[index] == null) return null;
 
         Node<K, V> currNode = table[index];
         Node<K, V> prevNode = null;
@@ -193,12 +193,14 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
                 }
 
                 size--;
-                return;
+                return currNode.getValue();
             }
 
             prevNode = currNode;
             currNode = currNode.next;
         }
+
+        return null;
     }
 
     /*
