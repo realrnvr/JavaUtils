@@ -1,25 +1,18 @@
 import CustomUtil.HashMap.CustomHashMap;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 7, 5, 3, 7};
         CustomHashMap<Integer, Integer> ref = new CustomHashMap<>();
 
-        ref.put(1, 2);
-        ref.put(2, 4);
-        ref.put(3, 6);
-        ref.put(4, 8);
+        for (int j : arr) {
+            ref.put(j, ref.getOrDefault(j, 0) + 1);
+        }
 
-        System.out.println(ref.get(1));
-        System.out.println(ref.get(2));
-        System.out.println(ref.get(3));
-        System.out.println(ref.get(4));
-
-        ref.remove(3);
-
-        System.out.println(ref.get(3));
+        System.out.println(ref.containsKey(10));
+        System.out.println(ref.containsKey(1));
+        System.out.println(ref.containsValue(2));
 
         System.out.println(ref);
     }
