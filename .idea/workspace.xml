@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/CustomHashSet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/CustomHashSetInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/__test__/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMapInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/HashMap/CustomHashMapInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/HashSet/CustomHashSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/HashSet/CustomHashSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,25 +81,16 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="TestMain.testContains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaUtils" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CustomUtil.HashSet.__test__.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CustomUtil.HashSet.__test__" />
-      <option name="MAIN_CLASS_NAME" value="CustomUtil.HashSet.__test__.TestMain" />
-      <option name="METHOD_NAME" value="testContains" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMain.testContains" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +115,7 @@
       <workItem from="1742819654856" duration="11946000" />
       <workItem from="1742835865744" duration="8074000" />
       <workItem from="1742874893392" duration="3362000" />
-      <workItem from="1742887365740" duration="10560000" />
+      <workItem from="1742887365740" duration="12945000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -234,7 +221,55 @@
       <option name="project" value="LOCAL" />
       <updated>1742893288931</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="load-factor removed">
+      <option name="closed" value="true" />
+      <created>1742898222468</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898222468</updated>
+    </task>
+    <task id="LOCAL-00015" summary="increase-size-by var addition">
+      <option name="closed" value="true" />
+      <created>1742898340649</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898340649</updated>
+    </task>
+    <task id="LOCAL-00016" summary="custom-hash-map general changes">
+      <option name="closed" value="true" />
+      <created>1742898381863</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898381863</updated>
+    </task>
+    <task id="LOCAL-00017" summary="custom-hash-set implementation">
+      <option name="closed" value="true" />
+      <created>1742898414830</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898414830</updated>
+    </task>
+    <task id="LOCAL-00018" summary="custom-hash-set implementation tests">
+      <option name="closed" value="true" />
+      <created>1742898422503</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898422503</updated>
+    </task>
+    <task id="LOCAL-00019" summary="com">
+      <option name="closed" value="true" />
+      <created>1742898436251</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1742898436251</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +286,11 @@
     <MESSAGE value="custom-hash-map improvements and tests" />
     <MESSAGE value="custom-array-list improvements and tests" />
     <MESSAGE value="tests" />
+    <MESSAGE value="load-factor removed" />
+    <MESSAGE value="increase-size-by var addition" />
+    <MESSAGE value="custom-hash-map general changes" />
+    <MESSAGE value="custom-hash-set implementation" />
+    <MESSAGE value="custom-hash-set implementation tests" />
     <MESSAGE value="com" />
     <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
