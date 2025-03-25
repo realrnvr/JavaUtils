@@ -1,5 +1,7 @@
 package CustomUtil.HashMap;
 
+import java.util.Objects;
+
 public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
     private static final int DEFAULT_CAPACITY = 16;
     private static final float DEFAULT_LOAD_FACTOR = 0.75f;
@@ -80,10 +82,10 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
                 newTable[index] = currNode;
                 currNode = nextNode;
             }
-
-            table = newTable;
-            capacity = newCapacity;
         }
+
+        table = newTable;
+        capacity = newCapacity;
     }
 
     @Override
@@ -93,18 +95,24 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
         }
 
         StringBuilder res = new StringBuilder();
-
         res.append("{ ");
-        for(int i = 0; i < size - 1; ++i) {
-            if(table[i] != null) {
-                res.append(table[i].getKey()).append(" => ").append(table[i].getValue()).append(", ");
+
+        int count = 0;
+        for(int i = 0; i < capacity; ++i) {
+            Node<K, V> currNode = table[i];
+
+            while(currNode != null) {
+                res.append(currNode.getKey()).append(" => ").append(currNode.getValue());
+
+                if(++count < size) {
+                    res.append(", ");
+                }
+
+                currNode = currNode.next;
             }
         }
 
-        if(table[size - 1] != null) {
-            res.append(table[size - 1].getKey()).append(" => ").append(table[size - 1].getValue()).append(" }");
-        }
-
+        res.append(" }");
         return res.toString();
     }
 
@@ -224,7 +232,7 @@ public class CustomHashMap<K, V> implements CustomHashMapInterface<K, V>{
             Node<K, V> currNode = table[i];
 
             while(currNode != null) {
-                if(currNode.value.equals(value)) {
+                if(Objects.equals(currNode.value, value)) {
                     return true;
                 }
 
