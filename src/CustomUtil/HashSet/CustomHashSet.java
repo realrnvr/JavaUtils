@@ -22,7 +22,7 @@ public class CustomHashSet<E> implements CustomHashSetInterface<E>{
     }
 
     private static class Node<E> {
-        E element;
+        private E element;
         Node<E> next;
 
         public Node(E element) {
@@ -32,6 +32,10 @@ public class CustomHashSet<E> implements CustomHashSetInterface<E>{
         public Node(E element, Node<E> next) {
             this.element = element;
             this.next = next;
+        }
+
+        public E getElement() {
+            return this.element;
         }
     }
 
@@ -46,12 +50,12 @@ public class CustomHashSet<E> implements CustomHashSetInterface<E>{
     @SuppressWarnings("unchecked")
     private void resize() {
         int newCapacity = capacity * 2;
-        Node<E>[] newTable = (Node<E>[])(new Node[newCapacity]);
+        Node<E>[] newTable = (Node<E>[]) (new Node[newCapacity]);
 
-        for(int i = 0; i < capacity; ++i) {
+        for (int i = 0; i < capacity; ++i) {
             Node<E> currNode = table[i];
 
-            while(currNode != null) {
+            while (currNode != null) {
                 Node<E> nextNode = currNode.next;
                 int index = hash(currNode.element, newCapacity);
                 currNode.next = newTable[index];
@@ -62,6 +66,34 @@ public class CustomHashSet<E> implements CustomHashSetInterface<E>{
 
         table = newTable;
         capacity = newCapacity;
+    }
+
+    @Override
+    public String toString() {
+        if(size == 0) {
+            return "[]";
+        }
+
+        StringBuilder res = new StringBuilder();
+        res.append("[ ");
+
+        int count = 0;
+        for(int i = 0; i < capacity; ++i) {
+            Node<E> currNode = table[i];
+
+            while(currNode != null) {
+                res.append(currNode.getElement());
+
+                if(++count < size) {
+                    res.append(", ");
+                }
+
+                currNode = currNode.next;
+            }
+        }
+
+        res.append(" ]");
+        return res.toString();
     }
 
     /*
