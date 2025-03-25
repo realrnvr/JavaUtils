@@ -3,30 +3,23 @@ package CustomUtil.ArrayList;
 import java.util.Arrays;
 
 public class CustomArrayList<T> implements CustomArrayListInterface<T>{
-    private static final int DEFAULT_SIZE = 10;
-    private static final int DEFAULT_LOAD_FACTOR = 2;
+    private static final int DEFAULT_SIZE = 16;
 
     private Object[] data;
     private int size;
-    private final float loadFactor;
 
     public CustomArrayList() {
-        this(DEFAULT_SIZE, DEFAULT_LOAD_FACTOR);
+        this(DEFAULT_SIZE);
     }
 
     public CustomArrayList(int capacity) {
-        this(capacity, DEFAULT_LOAD_FACTOR);
-    }
-
-    public CustomArrayList(int capacity, int loadFactor) {
         this.data = new Object[capacity];
-        this.loadFactor = loadFactor;
         this.size = 0;
     }
 
     private void assignNewDataIfFull() {
         if(size == data.length) {
-            int newCapacity = (int)(data.length * loadFactor);
+            int newCapacity = (int)(data.length * 2);
             Object[] newData = new Object[newCapacity];
             System.arraycopy(data, 0, newData, 0, data.length);
 
@@ -189,7 +182,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
             return;
         }
 
-        int maxCapacity = Math.max(newCapacity, (int)(data.length * loadFactor));
+        int maxCapacity = Math.max(newCapacity, (int)(data.length * 2));
         Object[] newData = new Object[maxCapacity];
         if (size >= 0) System.arraycopy(data, 0, newData, 0, size);
         data = newData;
