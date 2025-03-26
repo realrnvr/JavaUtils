@@ -49,7 +49,7 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E> {
     }
 
     /*
-    * Adds element in to the specified index of the LinkedList
+    * Adds element into the specified index of the LinkedList
     * With O(n) TC
     * */
     public void add(int index, E element) throws IndexOutOfBoundsException {
