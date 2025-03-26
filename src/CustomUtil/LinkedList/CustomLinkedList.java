@@ -1,6 +1,6 @@
 package CustomUtil.LinkedList;
 
-public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
+public class CustomLinkedList<E> implements CustomLinkedListInterface<E> {
     private Node<E> head;
     private int size;
 
@@ -9,7 +9,7 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         this.size = 0;
     }
     private static class Node<E> {
-        private E element;
+        private final E element;
         Node<E> next;
 
         public Node(E element) {
@@ -24,12 +24,12 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         public E getElement() {
             return this.element;
         }
-
-        public void setElement(E element) {
-            this.element = element;
-        }
     }
 
+    /*
+    * Adds element in the last position of the LinkedList
+    * With O(n) TC
+    * */
     public void add(E element) {
         Node<E> newNode = new Node<>(element);
 
@@ -48,6 +48,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         size++;
     }
 
+    /*
+    * Adds element in to the specified index of the LinkedList
+    * With O(n) TC
+    * */
     public void add(int index, E element) throws IndexOutOfBoundsException {
         if(index < 0 || index > size) {
             throw new IndexOutOfBoundsException("Index is out of bound");
@@ -74,6 +78,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         size++;
     }
 
+    /*
+    * Adds element at the start of the LinkedList
+    * With O(1) TC
+    * */
     public void addFirst(E element) {
         Node<E> newNode = new Node<>(element);
         newNode.next = head;
@@ -81,6 +89,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         size++;
     }
 
+    /*
+    * Adds element at the end of the LinkedList
+    * With O(n) TC
+    * */
     public void addLast(E element) {
         Node<E> currNode = head;
 
@@ -92,6 +104,11 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         size++;
     }
 
+    /*
+    * Removes first occurrence of the specified element
+    * from the LinkedList
+    * With O(n) TC
+    * */
     public boolean remove(E element) {
         if (isEmpty()) {
             return false;
@@ -119,7 +136,11 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         return true;
     }
 
-
+    /*
+    * Removes the element from the specified index
+    * From the LinkedList
+    * With O(n) TC
+    * */
     public E remove(int index) throws IndexOutOfBoundsException {
         if(index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index is out of bounds");
@@ -147,6 +168,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         return element;
     }
 
+    /*
+    * Removes first element from the LinkedList
+    * With O(1) TC
+    * */
     public E removeFirst() {
         if(isEmpty()) {
             throw new IndexOutOfBoundsException("Index is out of bound");
@@ -158,6 +183,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         return element;
     }
 
+    /*
+    * Removes last element from the LinkedList
+    * With O(n) TC
+    * */
     public E removeLast() {
         if(isEmpty()) {
             throw new IndexOutOfBoundsException("Index is out of bound");
@@ -179,11 +208,17 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         }
 
         E element = currNode.getElement();
-        prevNode.next = currNode.next;
+        prevNode.next = null;
         size--;
         return element;
     }
 
+    /*
+    * Retrieves the element at the index specified
+    * From the LinkedList
+    * Return null is the element is not present in the LinkedList
+    * With O(n) TC
+    * */
     public E get(int index) {
         if(index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index is out of bound");
@@ -198,6 +233,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         return currNode.getElement();
     }
 
+    /*
+    * Retrieves the first element from the LinkedList
+    * With O(1) TC
+    * */
     public E getFirst() {
         if(isEmpty()) {
             return null;
@@ -206,6 +245,10 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         return this.head.getElement();
     }
 
+    /*
+    * Retrieves last element from the LinkedList
+    * With O(n) TC
+    * */
     public E getLast() {
         if(isEmpty()) {
             return null;
@@ -219,19 +262,33 @@ public class CustomLinkedList<E> implements CustomLinkedListInterface<E>{
         return currNode.getElement();
     }
 
+    /*
+    * Checks whether the LinkedList is empty or not
+    * return true if it does, Otherwise false
+    * */
     public boolean isEmpty() {
         return size == 0;
     }
 
+    /*
+    * Returns the size of the LinkedList
+    * */
     public int size() {
         return this.size;
     }
 
+    /*
+    * Removes all the elements from the LinkedList
+    * */
     public void clear() {
         this.head = null;
         this.size = 0;
     }
 
+    /*
+    * Checks if the element specified contains in the LinkedList or not
+    * Return true if it does, Otherwise false
+    * */
     public boolean contains(E element) {
         if(isEmpty()) {
             return false;
