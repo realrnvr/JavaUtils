@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/LinkedList/CustomLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/LinkedList/CustomLinkedListInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/LinkedList/__test__/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/LinkedList/CustomLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/LinkedList/CustomLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +115,8 @@
       <workItem from="1742874893392" duration="3362000" />
       <workItem from="1742887365740" duration="13795000" />
       <workItem from="1742920994390" duration="603000" />
-      <workItem from="1742924687532" duration="8074000" />
+      <workItem from="1742924687532" duration="8180000" />
+      <workItem from="1742984741836" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -296,7 +294,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742900753474</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="custom-linked-list implementation">
+      <option name="closed" value="true" />
+      <created>1742932836012</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1742932836013</updated>
+    </task>
+    <task id="LOCAL-00024" summary="custom-linked-list implementation tests">
+      <option name="closed" value="true" />
+      <created>1742932856945</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1742932856945</updated>
+    </task>
+    <task id="LOCAL-00025" summary="com">
+      <option name="closed" value="true" />
+      <created>1742932893474</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742932893474</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +342,8 @@
     <MESSAGE value="custom-hash-set implementation tests" />
     <MESSAGE value="resize() + toString bug fix" />
     <MESSAGE value="toString() method addition" />
+    <MESSAGE value="custom-linked-list implementation" />
+    <MESSAGE value="custom-linked-list implementation tests" />
     <MESSAGE value="com" />
     <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
