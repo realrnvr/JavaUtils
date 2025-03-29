@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="custom-array-list implementation comments">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Stack/CustomStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Stack/__test__/TestMain.java" afterDir="false" />
+    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomPriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/__test__/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueueInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/__test__/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +62,9 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.CustomQueueTest.executor": "Run",
     "JUnit.TestMain.executor": "Run",
+    "JUnit.TestMain.testAddAndPeek.executor": "Debug",
     "JUnit.TestMain.testContains.executor": "Run",
     "JUnit.TestMain.testNullKey.executor": "Debug",
     "Repository.Attach.Annotations": "false",
@@ -119,7 +124,9 @@
       <workItem from="1742887365740" duration="13795000" />
       <workItem from="1742920994390" duration="603000" />
       <workItem from="1742924687532" duration="8180000" />
-      <workItem from="1742984741836" duration="3348000" />
+      <workItem from="1742984741836" duration="5051000" />
+      <workItem from="1743247812074" duration="3854000" />
+      <workItem from="1743260563430" duration="5197000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -345,7 +352,31 @@
       <option name="project" value="LOCAL" />
       <updated>1742986159897</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="custom-stack implementation">
+      <option name="closed" value="true" />
+      <created>1742989906497</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1742989906497</updated>
+    </task>
+    <task id="LOCAL-00030" summary="custom-stack implementation tests">
+      <option name="closed" value="true" />
+      <created>1742989916224</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1742989916224</updated>
+    </task>
+    <task id="LOCAL-00031" summary="com">
+      <option name="closed" value="true" />
+      <created>1742989940658</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1742989940658</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,9 +402,18 @@
     <MESSAGE value="toString() method addition" />
     <MESSAGE value="custom-linked-list implementation" />
     <MESSAGE value="custom-linked-list implementation tests" />
-    <MESSAGE value="com" />
     <MESSAGE value="custom-array-list implementation comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="custom-array-list implementation comments" />
+    <MESSAGE value="custom-stack implementation" />
+    <MESSAGE value="custom-stack implementation tests" />
+    <MESSAGE value="com" />
+    <option name="LAST_COMMIT_MESSAGE" value="com" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="CustomUtil.ArrayList.CustomArrayList" memberName="data" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
