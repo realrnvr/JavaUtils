@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import CustomUtil.Queue.CustomQueue;
 
-class CustomQueueTest {
+class TestMain {
     private CustomQueue<Integer> queue;
 
     @BeforeEach
@@ -48,5 +48,15 @@ class CustomQueueTest {
     @Test
     void testPeekOnEmptyQueue() {
         assertNull(queue.peek()); // Should return null instead of throwing an exception
+    }
+
+    @Test
+    void testPrintingLine() {
+        queue.add(1);
+        queue.add(2);
+        queue.add(3);
+        queue.add(4);
+
+        assertEquals("[1, 2, 3, 4]", queue.toString(), "Queue string representation should match expected output.");
     }
 }
