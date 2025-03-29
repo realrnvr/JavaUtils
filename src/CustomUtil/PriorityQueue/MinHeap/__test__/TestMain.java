@@ -1,13 +1,13 @@
-package CustomUtil.PriorityQueue.__test__;
+package CustomUtil.PriorityQueue.MinHeap.__test__;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import CustomUtil.PriorityQueue.CustomPriorityQueue;
+import CustomUtil.PriorityQueue.MinHeap.CustomMinHeapPriorityQueue;
 
 public class TestMain {
     @Test
     void testAddAndPeek() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(10);
         pq.add(2);
         pq.add(8);
@@ -19,7 +19,7 @@ public class TestMain {
 
     @Test
     void testPoll() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(5);
         pq.add(2);
         pq.add(8);
@@ -34,7 +34,7 @@ public class TestMain {
 
     @Test
     void testIsEmpty() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         assertTrue(pq.isEmpty(), "Queue should be empty initially.");
 
         pq.add(10);
@@ -46,7 +46,7 @@ public class TestMain {
 
     @Test
     void testAddingDuplicates() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(3);
         pq.add(3);
         pq.add(3);
@@ -59,7 +59,7 @@ public class TestMain {
 
     @Test
     void testMixOfOperations() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(10);
         pq.add(15);
         pq.add(5);
@@ -74,7 +74,7 @@ public class TestMain {
 
     @Test
     void testLargeNumberOfElements() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
 
         // Add 10,000 elements in descending order
         for (int i = 10000; i > 0; i--) {
@@ -91,7 +91,7 @@ public class TestMain {
 
     @Test
     void testNegativeNumbers() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(-10);
         pq.add(-20);
         pq.add(-5);
@@ -106,7 +106,7 @@ public class TestMain {
 
     @Test
     void testRandomOrderInserts() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         int[] numbers = {42, 1, 56, 3, 99, 10, 7, 32, 5};
 
         for (int num : numbers) {
@@ -123,7 +123,7 @@ public class TestMain {
 
     @Test
     void testAlternatingInsertPoll() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(10);
         pq.add(20);
         assertEquals(10, pq.poll(), "Poll should return 10.");
@@ -137,7 +137,7 @@ public class TestMain {
 
     @Test
     void testEdgeCaseSingleElement() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         pq.add(100);
         assertEquals(100, pq.poll(), "Poll should return the only element present.");
         assertTrue(pq.isEmpty(), "Queue should be empty after polling the only element.");
@@ -145,13 +145,25 @@ public class TestMain {
 
     @Test
     void testEdgeCaseEmptyPoll() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         assertNull(pq.poll(), "Polling an empty queue should return null.");
     }
 
     @Test
     void testEdgeCasePeekOnEmptyQueue() {
-        CustomPriorityQueue<Integer> pq = new CustomPriorityQueue<>();
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
         assertNull(pq.peek(), "Peeking an empty queue should return null.");
+    }
+
+    @Test
+    void testPrintingLine() {
+        CustomMinHeapPriorityQueue<Integer> pq = new CustomMinHeapPriorityQueue<>();
+        pq.add(-1);
+        pq.add(8);
+        pq.add(1);
+        pq.add(20);
+        pq.add(10);
+
+        assertEquals("[-1, 8, 1, 20, 10]", pq.toString(), "Priority Queue string representation should match expected output.");
     }
 }
