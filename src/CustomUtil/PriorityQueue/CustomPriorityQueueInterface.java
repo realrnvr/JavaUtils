@@ -1,6 +1,6 @@
 package CustomUtil.PriorityQueue;
 
-public interface CustomProrityQueueInterface<E> {
+public interface CustomPriorityQueueInterface<E> {
     void add(E element);
     E peek();
     E poll();
