@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomPriorityQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/__test__/TestMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueueInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/__test__/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MaxHeap/CustomMaxHeapPriorityQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MaxHeap/__test__/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/ArrayList/CustomArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MinHeap/CustomMinHeapPriorityQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomProrityQueueInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomPriorityQueueInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/__test__/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MinHeap/__test__/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomUtil/Queue/__test__/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/__test__/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +128,7 @@
       <workItem from="1742924687532" duration="8180000" />
       <workItem from="1742984741836" duration="5051000" />
       <workItem from="1743247812074" duration="3854000" />
-      <workItem from="1743260563430" duration="5197000" />
+      <workItem from="1743260563430" duration="7447000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -376,16 +378,72 @@
       <option name="project" value="LOCAL" />
       <updated>1742989940658</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="type rename">
+      <option name="closed" value="true" />
+      <created>1743271663548</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1743271663548</updated>
+    </task>
+    <task id="LOCAL-00033" summary="custom-priority-queue implementation">
+      <option name="closed" value="true" />
+      <created>1743271696028</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1743271696028</updated>
+    </task>
+    <task id="LOCAL-00034" summary="custom-priority-queue tests">
+      <option name="closed" value="true" />
+      <created>1743271707345</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1743271707345</updated>
+    </task>
+    <task id="LOCAL-00035" summary="custom-queue implementation">
+      <option name="closed" value="true" />
+      <created>1743271720931</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1743271720931</updated>
+    </task>
+    <task id="LOCAL-00036" summary="custom-queue tests">
+      <option name="closed" value="true" />
+      <created>1743271727317</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1743271727317</updated>
+    </task>
+    <task id="LOCAL-00037" summary="com">
+      <option name="closed" value="true" />
+      <created>1743271732569</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1743271732569</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="initial commit" />
-    <MESSAGE value="custom-array-class implementation and tests" />
-    <MESSAGE value="custom-array-list-interface + sout(list_name) after clear() method error fix" />
     <MESSAGE value="custom-hashmap-implementation" />
     <MESSAGE value="custom-array-implementation updates" />
     <MESSAGE value="custom-hashmap-implementation tests" />
@@ -405,6 +463,11 @@
     <MESSAGE value="custom-array-list implementation comments" />
     <MESSAGE value="custom-stack implementation" />
     <MESSAGE value="custom-stack implementation tests" />
+    <MESSAGE value="type rename" />
+    <MESSAGE value="custom-priority-queue implementation" />
+    <MESSAGE value="custom-priority-queue tests" />
+    <MESSAGE value="custom-queue implementation" />
+    <MESSAGE value="custom-queue tests" />
     <MESSAGE value="com" />
     <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
