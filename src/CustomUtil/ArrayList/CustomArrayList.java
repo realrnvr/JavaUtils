@@ -2,7 +2,7 @@ package CustomUtil.ArrayList;
 
 import java.util.Arrays;
 
-public class CustomArrayList<T> implements CustomArrayListInterface<T>{
+public class CustomArrayList<E> implements CustomArrayListInterface<E>{
     private static final int DEFAULT_SIZE = 16;
     private static final float INCREASE_SIZE_BY = 1.5f;
 
@@ -55,7 +55,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * Adds element into the ArrayList
     * With O(1) TC
     * */
-    public void add(T element) {
+    public void add(E element) {
         assignNewDataIfFull();
         data[size++] = element;
     }
@@ -65,7 +65,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * with the specified index
     * With O(n) TC
     * */
-    public void add(int index, T element) {
+    public void add(int index, E element) {
         isIndexInBound(index);
         assignNewDataIfFull();
 
@@ -82,9 +82,9 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * With O(1) TC
     *  */
     @SuppressWarnings("unchecked")
-    public T get(int index) {
+    public E get(int index) {
        isIndexInBound(index);
-       return (T)(data[index]);
+       return (E)(data[index]);
     }
 
     /*
@@ -93,7 +93,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * the element will get replaced with the specified element
     * With O(1) TC
     * */
-    public void set(int index, T element) {
+    public void set(int index, E element) {
         isIndexInBound(index);
         data[index] = element;
     }
@@ -103,12 +103,12 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * with O(n) TC
     * */
     @SuppressWarnings("unchecked")
-    public T remove(int index) {
+    public E remove(int index) {
         isIndexInBound(index);
-        T element = (T)(data[index]);
+        E element = (E)(data[index]);
 
         for(int i = index; i < size - 1; ++i) {
-            T temp = (T)(data[i]);
+            E temp = (E)(data[i]);
             data[i] = data[i+1];
             data[i+1] = temp;
         }
@@ -139,7 +139,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * True if ArrayList contains the specified element, otherwise false
     * With O(n) TC
     * */
-    public boolean contains(T element) {
+    public boolean contains(E element) {
         for(int i = 0; i < size; ++i) {
             if(data[i] == element) {
                 return true;
@@ -155,7 +155,7 @@ public class CustomArrayList<T> implements CustomArrayListInterface<T>{
     * Index of the first occurrence of that element will be returned
     * With O(n) TC
     * */
-    public int indexOf(T element) {
+    public int indexOf(E element) {
         for(int i = 0; i < size; ++i) {
             if(data[i] == element) {
                 return i;
