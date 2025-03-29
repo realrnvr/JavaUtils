@@ -1,13 +1,13 @@
-package CustomUtil.PriorityQueue;
+package CustomUtil.PriorityQueue.MinHeap;
 
 import CustomUtil.ArrayList.CustomArrayList;
 import CustomUtil.Queue.CustomQueueInterface;
 
-public class CustomPriorityQueue<E extends Comparable<E>> implements CustomQueueInterface<E> {
+public class CustomMinHeapPriorityQueue<E extends Comparable<E>> implements CustomQueueInterface<E> {
     private final CustomArrayList<E> ref;
     private int size;
 
-    public CustomPriorityQueue() {
+    public CustomMinHeapPriorityQueue() {
         this.ref = new CustomArrayList<>();
         this.size = 0;
     }
@@ -56,14 +56,28 @@ public class CustomPriorityQueue<E extends Comparable<E>> implements CustomQueue
         }
     }
 
+    /*
+    * Checks if the Priority Queue is empty or not
+    * if it does, Returns true, Otherwise false
+    * */
     public boolean isEmpty() {
         return size == 0;
     }
+
+    /*
+    * Adds element in to the Priority Queue
+    * With O(log n) TC
+    * */
     public void add(E element) {
         ref.add(element);
         this.size++;
         handleInsertion();
     }
+
+    /*
+    * Returns min element i.e., first element from the Priority Queue
+    * With O(1) TC
+    * */
     public E peek() {
         if(isEmpty()) {
             return null;
@@ -72,6 +86,10 @@ public class CustomPriorityQueue<E extends Comparable<E>> implements CustomQueue
         return ref.get(0);
     }
 
+    /*
+     * Remove and returns min element i.e., first element from the Priority Queue
+     * With O(log n) TC
+     * */
     public E poll() {
         if(isEmpty()) {
             return null;
@@ -88,5 +106,22 @@ public class CustomPriorityQueue<E extends Comparable<E>> implements CustomQueue
 
 
         return element;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        res.append("[");
+
+        int count = 0;
+        for(int i = 0; i < size; i++) {
+            res.append(ref.get(i));
+            if(++count < size) {
+                res.append(", ");
+            }
+        }
+
+        res.append("]");
+        return res.toString();
     }
 }
