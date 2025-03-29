@@ -93,4 +93,24 @@ public class CustomQueue<E> implements CustomQueueInterface<E> {
 
         return this.head.getElement();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        res.append("[");
+
+        Node<E> currNode = head;
+        int count = 0;
+        while(currNode != null) {
+            res.append(currNode.getElement());
+            if(++count < size) {
+                res.append(", ");
+            }
+
+            currNode = currNode.next;
+        }
+
+        res.append("]");
+        return res.toString();
+    }
 }
