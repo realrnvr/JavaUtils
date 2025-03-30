@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/StringBuilder/CustomStringBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/StringBuilder/CustomStringBuilderInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/StringBuilder/__test__/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +85,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaUtils" />
@@ -130,9 +127,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TestMain.testReplaceOutOfBounds" />
         <item itemvalue="JUnit.TestMain.testInsert" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -163,7 +160,7 @@
       <workItem from="1742984741836" duration="5051000" />
       <workItem from="1743247812074" duration="3854000" />
       <workItem from="1743260563430" duration="11850000" />
-      <workItem from="1743313973189" duration="10946000" />
+      <workItem from="1743313973189" duration="11493000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -525,7 +522,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743273911611</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="custom-string-builder implementation">
+      <option name="closed" value="true" />
+      <created>1743328582579</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1743328582579</updated>
+    </task>
+    <task id="LOCAL-00047" summary="custom-string-builder tests">
+      <option name="closed" value="true" />
+      <created>1743328588268</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1743328588268</updated>
+    </task>
+    <task id="LOCAL-00048" summary="com">
+      <option name="closed" value="true" />
+      <created>1743328594217</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1743328594217</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,8 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="custom-array-list improvements and tests" />
-    <MESSAGE value="tests" />
     <MESSAGE value="load-factor removed" />
     <MESSAGE value="increase-size-by var addition" />
     <MESSAGE value="custom-hash-map general changes" />
@@ -567,6 +586,8 @@
     <MESSAGE value="toString() method addition" />
     <MESSAGE value="max-heap tests" />
     <MESSAGE value="rename" />
+    <MESSAGE value="custom-string-builder implementation" />
+    <MESSAGE value="custom-string-builder tests" />
     <MESSAGE value="com" />
     <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
