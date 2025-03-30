@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MaxHeap/CustomMaxHeapPriorityQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MaxHeap/__test__/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/StringBuilder/CustomStringBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/StringBuilder/CustomStringBuilderInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CustomUtil/StringBuilder/__test__/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomPriorityQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MinHeap/CustomMinHeapPriorityQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomProrityQueueInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/CustomPriorityQueueInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/__test__/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/PriorityQueue/MinHeap/__test__/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/CustomQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CustomUtil/Queue/__test__/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomUtil/Queue/__test__/TestMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -48,6 +43,9 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProblemsViewState">
     <option name="autoscrollToSource" value="true" />
   </component>
@@ -68,7 +66,9 @@
     "JUnit.TestMain.executor": "Run",
     "JUnit.TestMain.testAddAndPeek.executor": "Debug",
     "JUnit.TestMain.testContains.executor": "Run",
+    "JUnit.TestMain.testInsert.executor": "Run",
     "JUnit.TestMain.testNullKey.executor": "Debug",
+    "JUnit.TestMain.testReplaceOutOfBounds.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -84,7 +84,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "settings.editor.selected.configurable": "Settings.JavaScript",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -96,8 +96,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestMain.testInsert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaUtils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CustomUtil.StringBuilder.__test__.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CustomUtil.StringBuilder.__test__" />
+      <option name="MAIN_CLASS_NAME" value="CustomUtil.StringBuilder.__test__.TestMain" />
+      <option name="METHOD_NAME" value="testInsert" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMain.testReplaceOutOfBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaUtils" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CustomUtil.StringBuilder.__test__.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CustomUtil.StringBuilder.__test__" />
+      <option name="MAIN_CLASS_NAME" value="CustomUtil.StringBuilder.__test__.TestMain" />
+      <option name="METHOD_NAME" value="testReplaceOutOfBounds" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestMain.testReplaceOutOfBounds" />
+        <item itemvalue="JUnit.TestMain.testInsert" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -128,7 +162,8 @@
       <workItem from="1742924687532" duration="8180000" />
       <workItem from="1742984741836" duration="5051000" />
       <workItem from="1743247812074" duration="3854000" />
-      <workItem from="1743260563430" duration="7447000" />
+      <workItem from="1743260563430" duration="11850000" />
+      <workItem from="1743313973189" duration="10946000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -426,7 +461,71 @@
       <option name="project" value="LOCAL" />
       <updated>1743271732569</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="max-heap implementation">
+      <option name="closed" value="true" />
+      <created>1743273777295</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273777295</updated>
+    </task>
+    <task id="LOCAL-00039" summary="min-heap implementation">
+      <option name="closed" value="true" />
+      <created>1743273784179</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273784179</updated>
+    </task>
+    <task id="LOCAL-00040" summary="priority-queue interface implementation">
+      <option name="closed" value="true" />
+      <created>1743273797057</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273797057</updated>
+    </task>
+    <task id="LOCAL-00041" summary="toString() method addition">
+      <option name="closed" value="true" />
+      <created>1743273828725</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273828725</updated>
+    </task>
+    <task id="LOCAL-00042" summary="max-heap tests">
+      <option name="closed" value="true" />
+      <created>1743273843046</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273843046</updated>
+    </task>
+    <task id="LOCAL-00043" summary="rename">
+      <option name="closed" value="true" />
+      <created>1743273866380</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273866380</updated>
+    </task>
+    <task id="LOCAL-00044" summary="rename">
+      <option name="closed" value="true" />
+      <created>1743273884588</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273884588</updated>
+    </task>
+    <task id="LOCAL-00045" summary="com">
+      <option name="closed" value="true" />
+      <created>1743273911611</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1743273911611</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,11 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="custom-hashmap-implementation" />
-    <MESSAGE value="custom-array-implementation updates" />
-    <MESSAGE value="custom-hashmap-implementation tests" />
-    <MESSAGE value="custom-hashmap-implementation addition" />
-    <MESSAGE value="custom-hash-map improvements and tests" />
     <MESSAGE value="custom-array-list improvements and tests" />
     <MESSAGE value="tests" />
     <MESSAGE value="load-factor removed" />
@@ -457,7 +551,6 @@
     <MESSAGE value="custom-hash-set implementation" />
     <MESSAGE value="custom-hash-set implementation tests" />
     <MESSAGE value="resize() + toString bug fix" />
-    <MESSAGE value="toString() method addition" />
     <MESSAGE value="custom-linked-list implementation" />
     <MESSAGE value="custom-linked-list implementation tests" />
     <MESSAGE value="custom-array-list implementation comments" />
@@ -468,6 +561,12 @@
     <MESSAGE value="custom-priority-queue tests" />
     <MESSAGE value="custom-queue implementation" />
     <MESSAGE value="custom-queue tests" />
+    <MESSAGE value="max-heap implementation" />
+    <MESSAGE value="min-heap implementation" />
+    <MESSAGE value="priority-queue interface implementation" />
+    <MESSAGE value="toString() method addition" />
+    <MESSAGE value="max-heap tests" />
+    <MESSAGE value="rename" />
     <MESSAGE value="com" />
     <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
@@ -481,5 +580,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JavaUtils$TestMain_testInsert.ic" NAME="TestMain.testInsert Coverage Results" MODIFIED="1743325326846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>CustomUtil.StringBuilder.__test__.*</FILTER>
+    </SUITE>
   </component>
 </project>
