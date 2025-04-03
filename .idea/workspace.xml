@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-    </list>
+    <list default="true" id="86219844-5ae6-4632-bb77-74ba22093d5b" name="Changes" comment="com" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,23 +163,7 @@
       <workItem from="1743439413538" duration="2886000" />
       <workItem from="1743490377223" duration="380000" />
       <workItem from="1743491223292" duration="36000" />
-      <workItem from="1743664110116" duration="89000" />
-    </task>
-    <task id="LOCAL-00002" summary="initial commit">
-      <option name="closed" value="true" />
-      <created>1742819808504</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1742819808504</updated>
-    </task>
-    <task id="LOCAL-00003" summary="custom-array-class implementation and tests">
-      <option name="closed" value="true" />
-      <created>1742825413490</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1742825413490</updated>
+      <workItem from="1743664110116" duration="462000" />
     </task>
     <task id="LOCAL-00004" summary="custom-array-list-interface + sout(list_name) after clear() method error fix">
       <option name="closed" value="true" />
@@ -560,7 +541,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743329143584</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="license comment">
+      <option name="closed" value="true" />
+      <created>1743664223321</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1743664223321</updated>
+    </task>
+    <task id="LOCAL-00052" summary="com">
+      <option name="closed" value="true" />
+      <created>1743664231647</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1743664231647</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -578,7 +575,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="increase-size-by var addition" />
     <MESSAGE value="custom-hash-map general changes" />
     <MESSAGE value="custom-hash-set implementation" />
     <MESSAGE value="custom-hash-set implementation tests" />
@@ -602,6 +598,7 @@
     <MESSAGE value="custom-string-builder implementation" />
     <MESSAGE value="custom-string-builder tests" />
     <MESSAGE value="implementations" />
+    <MESSAGE value="license comment" />
     <MESSAGE value="com" />
     <option name="LAST_COMMIT_MESSAGE" value="com" />
   </component>
