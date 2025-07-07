@@ -22,7 +22,7 @@ public class CustomMinHeapPriorityQueue<E extends Comparable<E>> implements Cust
         return 2 * idx + 1;
     }
 
-    private int rightChild(int idx) {
+    private int rightChildIdx(int idx) {
         return 2 * idx + 2;
     }
 
@@ -39,7 +39,7 @@ public class CustomMinHeapPriorityQueue<E extends Comparable<E>> implements Cust
 
     private void handleDeletion(int idx) {
         int leftIdx = leftChildIdx(idx);
-        int rightIdx = rightChild(idx);
+        int rightIdx = rightChildIdx(idx);
 
         int minIdx = idx;
         if(leftIdx < size && ref.get(leftIdx).compareTo(ref.get(idx)) < 0) {
